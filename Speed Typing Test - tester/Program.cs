@@ -19,9 +19,9 @@ namespace Speed_Typing_Test___tester
             Console.WriteLine("Insturctions: Copy the phrase! Case and punctuation matter. Do try your best :)\n");
             //string text = System.IO.File.ReadAllText(@"C:\Users\ac106503\OneDrive - Avondale College\Documents\11 TPI\Typing Test Files\" + FileName);
             
-            string pathOfFile = Path.GetFullPath("/story1.txt");
+            string pathOfFile = Path.GetFullPath("story1.txt");
             pathOfFile = pathOfFile.Replace(@"\","/");
-            pathOfFile = pathOfFile.Replace("/ bin / Debug / netcoreapp3.1 / story1.txt", "/ story1.txt");
+            pathOfFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/story1.txt", "/story1.txt");
             Console.WriteLine("**********"+ pathOfFile);
             //string text = System.IO.File.ReadAllText(pathOfFile);
             //C:\Users\ac106503\source\Repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester
