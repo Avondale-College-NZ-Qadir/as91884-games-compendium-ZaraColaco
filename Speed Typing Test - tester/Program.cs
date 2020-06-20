@@ -11,7 +11,8 @@ namespace Speed_Typing_Test___tester
         {
         private static List<string> TextList = new List<string>();
         private static string UserText = " ";
-        private static Timer MinuteTimer;
+        public static Timer minuteTimer = new System.Timers.Timer();
+        //System.Timers.Timer minuteTimer 
 
         //string FileName = " ";
         static void Main(string[] args)
@@ -27,24 +28,31 @@ namespace Speed_Typing_Test___tester
             Console.WriteLine("\nPress enter to start");
             Console.ReadLine(); 
             Console.WriteLine("your 60 seconds starts NOW!!!\n");
-            MinuteTimer = new System.Timers.Timer(60000);
-            MinuteTimer.Start();
-            Console.WriteLine(MinuteTimer);
+            minuteTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            minuteTimer.Interval = 6000;
+            minuteTimer.Enabled = true;
+            bool a = true;
+            while (a )
+                {
+                UserText = Console.ReadLine();
+                //Console.WriteLine("hi");
+                pathOfFile = pathOfFile.Replace(@FileName, "userstext.txt");
+                System.IO.File.WriteAllText(pathOfFile, UserText);
+                }
+            static void OnTimedEvent(object source, ElapsedEventArgs e)
+                {
+                Console.WriteLine("TIME'S UP!!");
+                minuteTimer.Enabled = false;
+                minuteTimer.Dispose();
+                a = false;
 
-            //while (MinuteTimer != null)
-            //    {
-            //    UserText = Console.ReadLine();
-            //    pathOfFile = pathOfFile.Replace(@FileName, "userstext.txt");
-            //    System.IO.File.WriteAllText(pathOfFile, UserText);
-            //    }
-            //while(MinuteTimer == null)
-            //    {
-            //    Console.WriteLine("TIME'S UP!!");
-            //    }
-            
+                }
+
+
+
             //System.IO.File.WriteAllText(pathOfFile , String.Empty);
- 
-           //For Later
+
+            //For Later
 
             //compare, score wpm and accuracy % method, carryon loop, stopping breaks- boundaries., Testing -----> Add to menu
 
