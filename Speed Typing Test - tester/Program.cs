@@ -4,14 +4,21 @@ using System.IO;
 using System.Timers;
 using System.IO.Enumeration;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;     
 
 namespace Speed_Typing_Test___tester
     {
-    class Program
+    class Globals
+        {
+        public static Timer timer = new Timer(6000);
+        public static bool stopTimer = false;
+        }
+    class Program:Globals
         {
         private static List<string> TextList = new List<string>();
         private static string UserText = " ";
-        public static Timer minuteTimer = new System.Timers.Timer();
+        private static Timer minuteTimer = new System.Timers.Timer();
+        private static string UserFile = " ";
         //System.Timers.Timer minuteTimer 
 
         //string FileName = " ";
@@ -22,32 +29,43 @@ namespace Speed_Typing_Test___tester
             Console.WriteLine("Insturctions: Copy the phrase! Case and punctuation matter. Do try your best :)\n");
             string pathOfFile = Path.GetFullPath(FileName);
             pathOfFile = pathOfFile.Replace(@"\","/");
-            pathOfFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
-            string text = System.IO.File.ReadAllText(pathOfFile);
+            string storyFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
+            string text = System.IO.File.ReadAllText(storyFile);
             System.Console.WriteLine(text);
             Console.WriteLine("\nPress enter to start");
             Console.ReadLine(); 
             Console.WriteLine("your 60 seconds starts NOW!!!\n");
-            minuteTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            minuteTimer.Interval = 6000;
-            minuteTimer.Enabled = true;
-            bool a = true;
-            while (a )
+            UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
+
+            while (stopTimer != true)
                 {
                 UserText = Console.ReadLine();
-                //Console.WriteLine("hi");
-                pathOfFile = pathOfFile.Replace(@FileName, "userstext.txt");
-                System.IO.File.WriteAllText(pathOfFile, UserText);
+                System.IO.File.WriteAllText(UserFile, string.Join("\n", UserText));
                 }
-            static void OnTimedEvent(object source, ElapsedEventArgs e)
-                {
-                Console.WriteLine("TIME'S UP!!");
-                minuteTimer.Enabled = false;
-                minuteTimer.Dispose();
-                a = false;
+            Console.WriteLine("How did you do?");
+            Console.ReadLine();
+            /*   minuteTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+               minuteTimer.Interval = 6000;
+               minuteTimer.Enabled = true;
+               bool a = true;
+               while (a )
+                   {
+                   UserText = Console.ReadLine();
+                   //Console.WriteLine("hi");
+                   pathOfFile = pathOfFile.Replace(@FileName, "userstext.txt");
+                   System.IO.File.WriteAllText(pathOfFile, UserText);
+                   }
+               static void OnTimedEvent(object source, ElapsedEventArgs e)
+                   {
+                   Console.WriteLine();
+                   minuteTimer.Enabled = false;
+                   minuteTimer.Dispose();
+                   a = false;
 
-                }
-
+                   }
+                   */
 
 
             //System.IO.File.WriteAllText(pathOfFile , String.Empty);
@@ -63,12 +81,20 @@ namespace Speed_Typing_Test___tester
 
 
             }
-           public static int RandomNumber(int min, int max) 
+           private static int RandomNumber(int min, int max) 
             {
             Random random = new Random();
             return random.Next(min, max);
             }
-          
+        private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
+            {
+            // Use SignalTime.
+            DateTime time = e.SignalTime;
+            Console.WriteLine("\nTIME'S UP!!");
+            timer.Stop();
+            timer.Dispose();
+            stopTimer = true;
+            }
         }
     }
      
