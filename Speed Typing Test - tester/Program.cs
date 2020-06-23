@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Timers;
@@ -10,20 +10,21 @@ namespace Speed_Typing_Test___tester
     {
     class Globals
         {
-        public static Timer timer = new Timer(6000);
+        public static Timer timer = new Timer(60000);
         public static bool stopTimer = false;
         }
     class Program:Globals
         {
         private static List<string> TextList = new List<string>();
-        private static string UserText = " ";
         private static Timer minuteTimer = new System.Timers.Timer();
         private static string UserFile = " ";
-        //System.Timers.Timer minuteTimer 
 
-        //string FileName = " ";
+
+ 
         static void Main(string[] args)
             {
+            string input = "";
+
             int randNum = RandomNumber(1, 5);
             string FileName = "story" + randNum.ToString() +".txt";
             Console.WriteLine("Insturctions: Copy the phrase! Case and punctuation matter. Do try your best :)\n");
@@ -38,34 +39,18 @@ namespace Speed_Typing_Test___tester
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
-
+        
             while (stopTimer != true)
                 {
-                UserText = Console.ReadLine();
-                System.IO.File.WriteAllText(UserFile, string.Join("\n", UserText));
+                input = input + (Console.ReadKey().KeyChar).ToString();
+                
                 }
-            Console.WriteLine("How did you do?");
-            Console.ReadLine();
-            /*   minuteTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-               minuteTimer.Interval = 6000;
-               minuteTimer.Enabled = true;
-               bool a = true;
-               while (a )
-                   {
-                   UserText = Console.ReadLine();
-                   //Console.WriteLine("hi");
-                   pathOfFile = pathOfFile.Replace(@FileName, "userstext.txt");
-                   System.IO.File.WriteAllText(pathOfFile, UserText);
-                   }
-               static void OnTimedEvent(object source, ElapsedEventArgs e)
-                   {
-                   Console.WriteLine();
-                   minuteTimer.Enabled = false;
-                   minuteTimer.Dispose();
-                   a = false;
+            System.IO.File.WriteAllText(UserFile, input);
+            Console.WriteLine("\nYou typed: "+ input);
+            Console.ReadKey();
+          
 
-                   }
-                   */
+
 
 
             //System.IO.File.WriteAllText(pathOfFile , String.Empty);
@@ -74,14 +59,8 @@ namespace Speed_Typing_Test___tester
 
             //compare, score wpm and accuracy % method, carryon loop, stopping breaks- boundaries., Testing -----> Add to menu
 
-
-            Console.ReadKey();
-
-
-
-
             }
-           private static int RandomNumber(int min, int max) 
+        private static int RandomNumber(int min, int max) 
             {
             Random random = new Random();
             return random.Next(min, max);
@@ -91,9 +70,14 @@ namespace Speed_Typing_Test___tester
             // Use SignalTime.
             DateTime time = e.SignalTime;
             Console.WriteLine("\nTIME'S UP!!");
+            Console.WriteLine("Press any key to continue");
+            stopTimer = true;
             timer.Stop();
             timer.Dispose();
-            stopTimer = true;
+
+
+            
+
             }
         }
     }
