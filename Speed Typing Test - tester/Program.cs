@@ -10,7 +10,7 @@ namespace Speed_Typing_Test___tester
     {
     class Globals
         {
-        public static Timer timer = new Timer(60000);
+        public static Timer timer = new Timer(10000);
         public static bool stopTimer = false;
         }
     class Program:Globals
@@ -30,23 +30,41 @@ namespace Speed_Typing_Test___tester
             Console.WriteLine("Insturctions: Copy the phrase! Case and punctuation matter. Do try your best :)\n");
             string pathOfFile = Path.GetFullPath(FileName);
             pathOfFile = pathOfFile.Replace(@"\","/");
-            string storyFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
-            string text = System.IO.File.ReadAllText(storyFile);
+           string storyFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
+           string text = System.IO.File.ReadAllText(storyFile);
             System.Console.WriteLine(text);
             Console.WriteLine("\nPress enter to start");
             Console.ReadLine(); 
             Console.WriteLine("your 60 seconds starts NOW!!!\n");
+
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
-        
+            string chk;
             while (stopTimer != true)
                 {
-                input = input + (Console.ReadKey().KeyChar).ToString();
+                chk = (Console.ReadKey().KeyChar).ToString();
+
+
+                if (chk == "\b")
+                    {
+                    Console.WriteLine("backspace pressed");
+                    //input = input.Replace(input[input.Length-1].ToString(),"");
+
+                    input =+input[input.Length - 1].ToString();
+                    }
+                else
+
+                    {
+                    input = input + chk;
+
+                    }
+                
                 
                 }
-            System.IO.File.WriteAllText(UserFile, input);
-            Console.WriteLine("\nYou typed: "+ input);
+            //System.IO.File.WriteAllText(UserFile, input);
+            Console.WriteLine("\nYou typed: ");
+            Console.WriteLine(input);
             Console.ReadKey();
           
 
