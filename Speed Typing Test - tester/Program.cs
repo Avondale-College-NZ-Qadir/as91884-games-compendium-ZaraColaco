@@ -24,6 +24,7 @@ namespace Speed_Typing_Test___tester
         static void Main(string[] args)
             {
             string input = "";
+            
 
             int randNum = RandomNumber(1, 5);
             string FileName = "story" + randNum.ToString() +".txt";
@@ -34,8 +35,9 @@ namespace Speed_Typing_Test___tester
            string text = System.IO.File.ReadAllText(storyFile);
             System.Console.WriteLine(text);
             Console.WriteLine("\nPress enter to start");
-            Console.ReadLine(); 
-            Console.WriteLine("your 60 seconds starts NOW!!!\n");
+            Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Your 60 seconds starts NOW!!!\n");
 
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             timer.Elapsed += Timer_Elapsed;
@@ -43,7 +45,9 @@ namespace Speed_Typing_Test___tester
             string chk;
             while (stopTimer != true)
                 {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 chk = (Console.ReadKey().KeyChar).ToString();
+                
 
 
                 if (chk == "\b")
@@ -51,11 +55,12 @@ namespace Speed_Typing_Test___tester
                     Console.WriteLine("backspace pressed");
                     //input = input.Replace(input[input.Length-1].ToString(),"");
 
-                    input =+input[input.Length - 1].ToString();
+                    input =input[input.Length - 1].ToString();
                     }
                 else
 
                     {
+
                     input = input + chk;
 
                     }
