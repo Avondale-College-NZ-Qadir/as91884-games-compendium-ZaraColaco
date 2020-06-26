@@ -11,3 +11,14 @@ C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Tes
 C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.dll
 C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.pdb
 C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.genruntimeconfig.cache
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.csprojAssemblyReference.cache
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.AssemblyInfoInputs.cache
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.AssemblyInfo.cs
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.dll
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\obj\Debug\netcoreapp3.1\Speed Typing Test - tester.pdb
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.exe
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.deps.json
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.runtimeconfig.json
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.runtimeconfig.dev.json
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.dll
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - tester\bin\Debug\netcoreapp3.1\Speed Typing Test - tester.pdb

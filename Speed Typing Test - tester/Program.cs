@@ -2,9 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Timers;
-using System.IO.Enumeration;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.Linq;     
 
 namespace Speed_Typing_Test___tester
     {
@@ -16,7 +13,7 @@ namespace Speed_Typing_Test___tester
     class Program:Globals
         {
         private static List<string> TextList = new List<string>();
-        private static Timer minuteTimer = new System.Timers.Timer();
+        private static Timer minuteTimer = new Timer();
         private static string UserFile = " ";
 
 
@@ -24,18 +21,20 @@ namespace Speed_Typing_Test___tester
         static void Main(string[] args)
             {
             string input = "";
+            
 
             int randNum = RandomNumber(1, 5);
             string FileName = "story" + randNum.ToString() +".txt";
             Console.WriteLine("Insturctions: Copy the phrase! Case and punctuation matter. Do try your best :)\n");
             string pathOfFile = Path.GetFullPath(FileName);
             pathOfFile = pathOfFile.Replace(@"\","/");
-           string storyFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
-           string text = System.IO.File.ReadAllText(storyFile);
+            string storyFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName , "/" + FileName);
+            string text = System.IO.File.ReadAllText(storyFile);
             System.Console.WriteLine(text);
             Console.WriteLine("\nPress enter to start");
-            Console.ReadLine(); 
-            Console.WriteLine("your 60 seconds starts NOW!!!\n");
+            Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Your 60 seconds starts NOW!!!\n");
 
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             timer.Elapsed += Timer_Elapsed;
@@ -43,19 +42,22 @@ namespace Speed_Typing_Test___tester
             string chk;
             while (stopTimer != true)
                 {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 chk = (Console.ReadKey().KeyChar).ToString();
+                
 
 
-                if (chk == "\b")
+              if (chk == "\b")
                     {
                     Console.WriteLine("backspace pressed");
-                    //input = input.Replace(input[input.Length-1].ToString(),"");
+                   input = input.Replace(input[input.Length-1].ToString(),"");
 
-                    input =+input[input.Length - 1].ToString();
+                    input +=input[input.Length - 1].ToString();
                     }
                 else
 
                     {
+
                     input = input + chk;
 
                     }

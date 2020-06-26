@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\colac\\.nuget\\packages\\": {}
+    "C:\\Users\\ac106503\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\colac\\Source\\Repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\Speed Typing Test - tester.csproj",
+      "projectUniqueName": "C:\\Users\\ac106503\\source\\repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\Speed Typing Test - tester.csproj",
       "projectName": "Speed Typing Test - tester",
-      "projectPath": "C:\\Users\\colac\\Source\\Repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\Speed Typing Test - tester.csproj",
-      "packagesPath": "C:\\Users\\colac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\colac\\Source\\Repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\obj\\",
+      "projectPath": "C:\\Users\\ac106503\\source\\repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\Speed Typing Test - tester.csproj",
+      "packagesPath": "C:\\Users\\ac106503\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ac106503\\source\\repos\\as91884-games-compendium-ZaraColaco\\Speed Typing Test - tester\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\colac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ac106503\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
