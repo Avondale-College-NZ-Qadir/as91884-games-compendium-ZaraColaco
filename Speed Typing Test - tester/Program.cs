@@ -7,7 +7,7 @@ namespace Speed_Typing_Test___tester
     {
     class Globals
         {
-        public static Timer timer = new Timer(10000);
+        public static Timer timer = new Timer(20000);
         public static bool stopTimer = false;
         }
     class Program:Globals
@@ -20,8 +20,8 @@ namespace Speed_Typing_Test___tester
  
         static void Main(string[] args)
             {
-            string input = "";
-            
+            List<string> input = new List<string>();
+
 
             int randNum = RandomNumber(1, 5);
             string FileName = "story" + randNum.ToString() +".txt";
@@ -39,31 +39,43 @@ namespace Speed_Typing_Test___tester
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
-            string chk;
-            while (stopTimer != true)
+            //string chk;
+            //while (stopTimer != true)
+
+
+            //chk = (Console.ReadKey().KeyChar).ToString();
+            while (!Globals.stopTimer)
                 {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                chk = (Console.ReadKey().KeyChar).ToString();
-                
+                input.Add((Console.ReadKey().KeyChar).ToString());
 
 
-              if (chk == "\b")
+                input[input.Count - 1] = "";
+                Console.WriteLine("\nYou typed: ");
+                Console.WriteLine(string.Join(' ', input));
+
+
+                if (input.Contains("\b"))
                     {
                     Console.WriteLine("backspace pressed");
-                   input = input.Replace(input[input.Length-1].ToString(),"");
+                    input.RemoveAt(input.Count);
+                    Console.WriteLine(input);
 
-                    input +=input[input.Length - 1].ToString();
+                    // input = input.Replace(input[input.Count-1].ToString(),"");
+
+                    //input +=input[input.Length - 1].ToString();
                     }
                 else
 
                     {
 
-                    input = input + chk;
+                    //input = input + chk;
 
                     }
-                
-                
                 }
+                
+                
+                
             //System.IO.File.WriteAllText(UserFile, input);
             Console.WriteLine("\nYou typed: ");
             Console.WriteLine(input);
