@@ -43,6 +43,28 @@ namespace Speed_Typing_Test___tester
             Console.WriteLine(time.ToString("h:mm:ss tt"));
             Console.ReadLine();
 
+            while(time!= time.AddSeconds(6))
+                {
+                if (input.Contains("\b"))
+                    {
+                    //Console.WriteLine("backspace pressed");
+                    //Console.Clear();
+
+                    input.Clear();
+                    
+                    Console.WriteLine(string.Join(" ", input));
+                    }
+
+                else if (!(input.Contains("\b")))
+                    {
+
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                   input.Add((Console.ReadKey().KeyChar).ToString());
+                    }
+                time = DateTime.Now;
+                }
+
+            //input[input.Count - 1] = "";
             static int RandomNumber(int min, int max)
                 {
                 Random random = new Random();
