@@ -34,38 +34,62 @@ namespace Speed_Typing_Test___tester
             System.Console.WriteLine(text);
             Console.WriteLine("\nPress enter to start");
             Console.ReadLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Your 60 seconds starts NOW!!!\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             UserFile = pathOfFile.Replace(@"/bin/Debug/netcoreapp3.1/" + FileName, "/userstext.txt");
             Console.ReadLine();
             DateTime time = DateTime.Now;
+            DateTime timeOver = DateTime.Now.AddSeconds(10);
             Console.WriteLine(time.ToString("h:mm:ss tt"));
+            Console.WriteLine("You have until");
+            Console.WriteLine(timeOver.ToString("h:mm:ss tt"));
+            Console.WriteLine("\nPress enter to start");
             Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Your 60 seconds starts NOW!!!\n");
 
-            while(time!= time.AddSeconds(6))
+            while (time.ToString() != timeOver.ToString())
                 {
                 if (input.Contains("\b"))
                     {
-                    //Console.WriteLine("backspace pressed");
-                    //Console.Clear();
+                    Console.WriteLine("backspace pressed");
 
-                    input.Clear();
-                    
-                    Console.WriteLine(string.Join(" ", input));
                     }
-
-                else if (!(input.Contains("\b")))
-                    {
-
+                else
+                    { 
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                   input.Add((Console.ReadKey().KeyChar).ToString());
-                    }
-                time = DateTime.Now;
-                }
+                    time = DateTime.Now;
+                    //Console.WriteLine(time.ToString());
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    input.Add((Console.ReadKey().KeyChar).ToString());
+                   }
+            Console.WriteLine("Time over");
+            Console.WriteLine(input);
+            Console.ReadKey();
 
-            //input[input.Count - 1] = "";
-            static int RandomNumber(int min, int max)
+
+
+
+
+
+                //        //Console.Clear();
+
+                //        input.Clear();
+
+                //        Console.WriteLine(string.Join(" ", input));
+                //        }
+
+                //    else if (!(input.Contains("\b")))
+                //        {
+
+                //        Console.ForegroundColor = ConsoleColor.Yellow;
+                //       input.Add((Console.ReadKey().KeyChar).ToString());
+                //        }
+                //    time = DateTime.Now;
+                //    }
+
+                //input[input.Count - 1] = "";
+                static int RandomNumber(int min, int max)
                 {
                 Random random = new Random();
                 return random.Next(min, max);
@@ -74,6 +98,10 @@ namespace Speed_Typing_Test___tester
             }
         }
     }
-     
-      
-   
+
+
+
+            
+//Stopwatch s = Stopwatch.StartNew();
+//s.Stop();
+//Console.WriteLine("Elapsed Time: {0} ms", s.ElapsedMilliseconds);
