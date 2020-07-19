@@ -100,9 +100,11 @@ namespace Speed_Typing_Test___Form_Template
             BTScore.Visible = false;
             string[] test1 = TBStory.Text.Split(' ');
             string[] test2 = TBUserInput.Text.Split(' ');
-            List<string> storyList = test1.ToList();
-            List<string> responseList = test2.ToList();
-            //List<string> resultsList = test2.ToList();
+            var storyList = new List<string> (test1.ToList());
+            var responseList = new List<string> (test2.ToList());
+            var filter = storyList.Except(responseList);
+            firstNotSecond = storyList.Except(responseList);
+            //List<string> resultsList = test2.ToList();s
             //int i;
             //for (i in range(len(storyList)))
             //    {
@@ -116,7 +118,9 @@ namespace Speed_Typing_Test___Form_Template
             //        }
 
             //    }
-            var firstNotSecond = storyList.Except(responseList).ToList();
+
+
+
             //int ctr = 0;
             //int y = 0;
             //for (int i = 0; i < storyList.Count && i < responseList.Count; i++)
