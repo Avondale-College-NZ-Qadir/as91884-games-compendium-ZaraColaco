@@ -90,20 +90,17 @@ namespace Speed_Typing_Test___Form_Template
 
             }
 
-        private void timer1_Tick(object sender, EventArgs e)
-            {
 
-            }
 
         private void BTScore_Click(object sender, EventArgs e)
             {
             BTScore.Visible = false;
             string[] test1 = TBStory.Text.Split(' ');
             string[] test2 = TBUserInput.Text.Split(' ');
-            var storyList = new List<string> (test1.ToList());
-            var responseList = new List<string> (test2.ToList());
-            var filter = storyList.Except(responseList);
-            firstNotSecond = storyList.Except(responseList);
+            var storyList = new List<string>(test1.ToList());
+            var resultsList = new List<string>(test2.ToList());
+            //var filter = storyList.Except(responseList);
+            ////firstNotSecond = storyList.Except(responseList);
             //List<string> resultsList = test2.ToList();s
             //int i;
             //for (i in range(len(storyList)))
@@ -121,23 +118,28 @@ namespace Speed_Typing_Test___Form_Template
 
 
 
-            //int ctr = 0;
-            //int y = 0;
-            //for (int i = 0; i < storyList.Count && i < responseList.Count; i++)
-            //    {
-            //    if (resultsList[i] == storyList[i])
+            int ctr = 0;
+            for (int i = 0; i < storyList.Count && i < resultsList.Count; i++)
+                {
+                if (resultsList[i] == storyList[i])
 
-            //        {
-            //        ctr++;
-            //        }
-            //    else
-            //        {
-            //        if (resultsList[i] == storyList[i + 1])
-            //            {
+                    {
+                    ctr++;
+                    }
+                else
+                    {
+                        {
+                        scoreLabel.Visible = true;
+                        scoreLabel.Text = ctr + " WPM";
+                        //button to return to menu
+                        }
+                    }
+                }
+            }
 
-            //            }
-            //        }
-            //    }
+        private void LBdisplay_Click(object sender, EventArgs e)
+            {
+
             }
         }
     }
