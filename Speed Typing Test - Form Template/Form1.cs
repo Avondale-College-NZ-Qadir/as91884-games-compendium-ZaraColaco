@@ -17,6 +17,15 @@ using System.Linq;
 
 namespace Speed_Typing_Test___Form_Template
     {
+
+    public static class globals
+        {
+        public static int score;
+        
+        }
+
+
+
     public partial class Form1 : Form
         {
         //public static Timer timer = new Timer(30000);
@@ -97,22 +106,22 @@ namespace Speed_Typing_Test___Form_Template
             var userStoryList = new List<string>(test2.ToList());
             List<string> resultList = storyList.Except(userStoryList).ToList();
             float storywords = storyList.Count();
-            int u = 0;
+            score = 0;
             resultList.Clear();
-            for (int i = 0; i < storywords && u < userStoryList.Count(); i++)
+            for (int i = 0; i < storywords && score < userStoryList.Count(); i++)
                 {
                 if (storyList[i] == userStoryList[u])
                     {
                     resultList.Add(storyList[i]);
-                    u++;
+                    score++;
                     }
                 else // check next userstory word
                     {
-                    u++;
-                    if (storyList[i] == userStoryList[u])
+                    score++;
+                    if (storyList[i] == userStoryList[score])
                         {
                         resultList.Add(storyList[i]);
-                        u++;
+                        score++;
                         }
                     }
 
