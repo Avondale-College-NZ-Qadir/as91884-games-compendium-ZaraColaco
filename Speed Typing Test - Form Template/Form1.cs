@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 //using System.ComponentModel;
 //using System.Data;
@@ -94,45 +94,80 @@ namespace Speed_Typing_Test___Form_Template
             string[] test1 = TBStory.Text.Split(' ');
             string[] test2 = TBUserInput.Text.Split(' ');
             var storyList = new List<string>(test1.ToList());
-            var resultsList = new List<string>(test2.ToList());
-            //var filter = storyList.Except(responseList);
-            ////firstNotSecond = storyList.Except(responseList);
-            //List<string> resultsList = test2.ToList();s
-            //int i;
-            //for (i in range(len(storyList)))
+            var userStoryList = new List<string>(test2.ToList());
+            List<string> resultList = storyList.Except(userStoryList).ToList();
+            float storywords = storyList.Count();
+            int u = 0;
+            resultList.Clear();
+            for (int i = 0; i < storywords && u < userStoryList.Count(); i++)
+                {
+                if (storyList[i] == userStoryList[u])
+                    {
+                    resultList.Add(storyList[i]);
+                    u++;
+                    }
+                else // check next userstory word
+                    {
+                    u++;
+                    if (storyList[i] == userStoryList[u])
+                        {
+                        resultList.Add(storyList[i]);
+                        u++;
+                        }
+                    }
+
+
+
+                }
+            float correctWords = resultList.Count();
+            float score = (correctWords) / (storywords) * 100;
+            scoreLabel.Text = correctWords + "WPM        completion: " + score + "%";
+            scoreLabel.Visible = true;
+
+            //List<string> resultList = storyList.Except(userStoryList).ToList();
+            //float correctwords = storyList.Count() - resultList.Count();
+            //float score = (correctwords) / (storyList.Count) * 100;
+            //scoreLabel.Text = correctwords + "WPM        Accuracy: " + score;
+            //scoreLabel.Visible = true;
+
+            ////var filter = storyList.Except(responseList);
+            //////firstNotSecond = storyList.Except(responseList);
+            ////List<string> resultsList = test2.ToList();s
+            ////int i;
+            ////for (i in range(len(storyList)))
+            ////    {
+            ////    if(storyList[i]>responseList[i])
+            ////        {
+            ////        resultsList.Append(1);
+            ////        }
+            ////    else
+            ////        {
+            ////        resultsList.Append(0);
+            ////        }
+
+            ////    }
+
+
+
+            //int ctr = 0;
+            //for (int i = 0; i < storyList.Count && i < userStoryList.Count; i++)
             //    {
-            //    if(storyList[i]>responseList[i])
+            //    if (userStoryList[i] == storyList[i])
+
             //        {
-            //        resultsList.Append(1);
+            //        ctr++;
             //        }
             //    else
             //        {
-            //        resultsList.Append(0);
+            //            {
+            //            scoreLabel.Visible = true;
+            //            scoreLabel.Text = ctr + " WPM";
+            //            //button to return to menu
+            //            }
             //        }
-
-            //    }
-
-
-
-            int ctr = 0;
-            for (int i = 0; i < storyList.Count && i < resultsList.Count; i++)
-                {
-                if (resultsList[i] == storyList[i])
-
-                    {
-                    ctr++;
-                    }
-                else
-                    {
-                        {
-                        scoreLabel.Visible = true;
-                        scoreLabel.Text = ctr + " WPM";
-                        //button to return to menu
-                        }
-                    }
-                }
             }
+        }
 
 
         }
-    }
+    
