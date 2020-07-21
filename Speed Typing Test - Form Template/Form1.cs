@@ -41,10 +41,6 @@ namespace Speed_Typing_Test___Form_Template
             UserFile = pathOfFile.Replace(@"/bin/Debug/" + FileName, "/userstext.txt");
             
 
-
-  
-
-
             }
         private static int RandomNumber(int min, int max)
             {
@@ -137,9 +133,6 @@ namespace Speed_Typing_Test___Form_Template
                 }
             }
 
-        private void LBdisplay_Click(object sender, EventArgs e)
-            {
 
-            }
         }
     }

@@ -1,0 +1,10 @@
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\bin\Debug\Anagrams.exe.config
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\bin\Debug\Anagrams.exe
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\bin\Debug\Anagrams.pdb
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.csprojAssemblyReference.cache
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.Form1.resources
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.Properties.Resources.resources
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.csproj.GenerateResource.cache
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.csproj.CoreCompileInputs.cache
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.exe
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Anagrams\obj\Debug\Anagrams.pdb
