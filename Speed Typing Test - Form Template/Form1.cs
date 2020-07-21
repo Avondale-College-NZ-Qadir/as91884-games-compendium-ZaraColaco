@@ -18,14 +18,6 @@ using System.Linq;
 namespace Speed_Typing_Test___Form_Template
     {
 
-    public static class globals
-        {
-        public static int score;
-        
-        }
-
-
-
     public partial class Form1 : Form
         {
         //public static Timer timer = new Timer(30000);
@@ -91,7 +83,11 @@ namespace Speed_Typing_Test___Form_Template
             TextWriter txt = new StreamWriter(UserFile);
             txt.Write(TBUserInput.Text);
             txt.Close();
-            BTScore.Visible = true;
+            if (BTScore.Visible!false)
+                    {
+                BTScore.Visible = true;
+                    }
+            //BTScore.Visible = true;
 
             }
 
@@ -99,29 +95,30 @@ namespace Speed_Typing_Test___Form_Template
 
         private void BTScore_Click(object sender, EventArgs e)
             {
+
             BTScore.Visible = false;
             string[] test1 = TBStory.Text.Split(' ');
             string[] test2 = TBUserInput.Text.Split(' ');
             var storyList = new List<string>(test1.ToList());
             var userStoryList = new List<string>(test2.ToList());
             List<string> resultList = storyList.Except(userStoryList).ToList();
-            float storywords = storyList.Count();
-            score = 0;
+            int storywords = storyList.Count();
+            //globals.UserListIndex = 0;
             resultList.Clear();
-            for (int i = 0; i < storywords && score < userStoryList.Count(); i++)
+            for (int i = 0; i < storywords && i < (userStoryList.Count() -1); i++)
                 {
-                if (storyList[i] == userStoryList[u])
+                if (storyList[i] == userStoryList[i]) //globals.UserListIndex])
                     {
                     resultList.Add(storyList[i]);
-                    score++;
+                    //globals.UserListIndex++;
                     }
                 else // check next userstory word
                     {
-                    score++;
-                    if (storyList[i] == userStoryList[score])
+                    //globals.UserListIndex++;
+                    if (storyList[i] == userStoryList[i]) //
                         {
                         resultList.Add(storyList[i]);
-                        score++;
+                        //globals.UserListIndex++;
                         }
                     }
 
@@ -177,6 +174,10 @@ namespace Speed_Typing_Test___Form_Template
             }
         }
 
+    public static class globals
+        {
+        //public static int UserListIndex;
 
         }
+    }
     
