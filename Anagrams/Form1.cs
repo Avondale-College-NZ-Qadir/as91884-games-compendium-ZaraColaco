@@ -21,5 +21,12 @@ namespace Anagrams
             {
 
             }
+
+        private void BTstart_Click(object sender, EventArgs e)
+            {
+            BTstart.Visible = false;
+            TBLetters.Text = "N     A     R     S     E     W";
+
+            }
         }
     }

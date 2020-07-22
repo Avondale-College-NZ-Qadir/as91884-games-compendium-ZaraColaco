@@ -30,7 +30,9 @@
             {
             this.LB1 = new System.Windows.Forms.Label();
             this.LB2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTstart = new System.Windows.Forms.Button();
+            this.TBLetters = new System.Windows.Forms.RichTextBox();
+            this.TBUser = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // LB1
@@ -50,26 +52,50 @@
             this.LB2.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB2.Location = new System.Drawing.Point(15, 70);
             this.LB2.Name = "LB2";
-            this.LB2.Size = new System.Drawing.Size(1004, 28);
+            this.LB2.Size = new System.Drawing.Size(1145, 28);
             this.LB2.TabIndex = 1;
-            this.LB2.Text = "Instructions: Use the following letters to make as many words as you can in one m" +
-    "inute. Press Enter after each word";
+            this.LB2.Text = "Instructions: Use the following letters to make as many 4 or more Letter words as" +
+    " you can in one minute. Press Enter after each word";
             // 
-            // button1
+            // BTstart
             // 
-            this.button1.Location = new System.Drawing.Point(20, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTstart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTstart.ForeColor = System.Drawing.Color.Red;
+            this.BTstart.Location = new System.Drawing.Point(18, 115);
+            this.BTstart.Name = "BTstart";
+            this.BTstart.Size = new System.Drawing.Size(172, 41);
+            this.BTstart.TabIndex = 2;
+            this.BTstart.Text = "Click to Start";
+            this.BTstart.UseVisualStyleBackColor = true;
+            this.BTstart.Click += new System.EventHandler(this.BTstart_Click);
+            // 
+            // TBLetters
+            // 
+            this.TBLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBLetters.Location = new System.Drawing.Point(12, 162);
+            this.TBLetters.Name = "TBLetters";
+            this.TBLetters.ReadOnly = true;
+            this.TBLetters.Size = new System.Drawing.Size(1007, 96);
+            this.TBLetters.TabIndex = 3;
+            this.TBLetters.Text = "";
+            // 
+            // TBUser
+            // 
+            this.TBUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBUser.Location = new System.Drawing.Point(12, 292);
+            this.TBUser.Name = "TBUser";
+            this.TBUser.Size = new System.Drawing.Size(1007, 317);
+            this.TBUser.TabIndex = 4;
+            this.TBUser.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 750);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TBUser);
+            this.Controls.Add(this.TBLetters);
+            this.Controls.Add(this.BTstart);
             this.Controls.Add(this.LB2);
             this.Controls.Add(this.LB1);
             this.Name = "Form1";
@@ -83,7 +109,9 @@
         #endregion
         private System.Windows.Forms.Label LB1;
         private System.Windows.Forms.Label LB2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTstart;
+        private System.Windows.Forms.RichTextBox TBLetters;
+        private System.Windows.Forms.RichTextBox TBUser;
         }
     }
 

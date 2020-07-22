@@ -81,7 +81,7 @@
             this.LBdisplay.AutoSize = true;
             this.LBdisplay.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBdisplay.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBdisplay.Location = new System.Drawing.Point(231, 392);
+            this.LBdisplay.Location = new System.Drawing.Point(256, 392);
             this.LBdisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBdisplay.Name = "LBdisplay";
             this.LBdisplay.Size = new System.Drawing.Size(213, 33);
@@ -122,7 +122,7 @@
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.scoreLabel.Location = new System.Drawing.Point(285, 667);
+            this.scoreLabel.Location = new System.Drawing.Point(217, 667);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(0, 28);
             this.scoreLabel.TabIndex = 10;
