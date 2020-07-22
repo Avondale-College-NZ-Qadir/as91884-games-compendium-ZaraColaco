@@ -33,6 +33,7 @@
             this.BTstart = new System.Windows.Forms.Button();
             this.TBLetters = new System.Windows.Forms.RichTextBox();
             this.TBUser = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LB1
@@ -82,17 +83,27 @@
             // TBUser
             // 
             this.TBUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBUser.Location = new System.Drawing.Point(12, 292);
+            this.TBUser.Location = new System.Drawing.Point(12, 312);
             this.TBUser.Name = "TBUser";
             this.TBUser.Size = new System.Drawing.Size(1007, 317);
             this.TBUser.TabIndex = 4;
             this.TBUser.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 750);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TBUser);
             this.Controls.Add(this.TBLetters);
             this.Controls.Add(this.BTstart);
@@ -112,6 +123,7 @@
         private System.Windows.Forms.Button BTstart;
         private System.Windows.Forms.RichTextBox TBLetters;
         private System.Windows.Forms.RichTextBox TBUser;
+        private System.Windows.Forms.Label label1;
         }
     }
 
