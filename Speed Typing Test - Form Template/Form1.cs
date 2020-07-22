@@ -83,11 +83,10 @@ namespace Speed_Typing_Test___Form_Template
             TextWriter txt = new StreamWriter(UserFile);
             txt.Write(TBUserInput.Text);
             txt.Close();
-            if (BTScore.Visible!false)
+            if (globals.timesRan == 0)
                     {
                 BTScore.Visible = true;
                     }
-            //BTScore.Visible = true;
 
             }
 
@@ -95,9 +94,9 @@ namespace Speed_Typing_Test___Form_Template
 
         private void BTScore_Click(object sender, EventArgs e)
             {
-
+            globals.timesRan++;
             BTScore.Visible = false;
-            string[] test1 = TBStory.Text.Split(' ');
+            string[] test1 = TBStory.Text.Split(' ','\n','\r');
             string[] test2 = TBUserInput.Text.Split(' ');
             var storyList = new List<string>(test1.ToList());
             var userStoryList = new List<string>(test2.ToList());
@@ -177,6 +176,7 @@ namespace Speed_Typing_Test___Form_Template
     public static class globals
         {
         //public static int UserListIndex;
+        public static int timesRan = 0;
 
         }
     }
