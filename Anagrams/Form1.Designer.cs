@@ -34,6 +34,8 @@
             this.TBLetters = new System.Windows.Forms.RichTextBox();
             this.TBUser = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BTscore = new System.Windows.Forms.Button();
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LB1
@@ -53,9 +55,9 @@
             this.LB2.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB2.Location = new System.Drawing.Point(15, 70);
             this.LB2.Name = "LB2";
-            this.LB2.Size = new System.Drawing.Size(1145, 28);
+            this.LB2.Size = new System.Drawing.Size(1137, 28);
             this.LB2.TabIndex = 1;
-            this.LB2.Text = "Instructions: Use the following letters to make as many 4 or more Letter words as" +
+            this.LB2.Text = "Instructions: Use the following letters to make as many 3 or more letter words as" +
     " you can in one minute. Press Enter after each word";
             // 
             // BTstart
@@ -98,11 +100,34 @@
             this.label1.TabIndex = 0;
             this.label1.Visible = false;
             // 
+            // BTscore
+            // 
+            this.BTscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTscore.ForeColor = System.Drawing.Color.Red;
+            this.BTscore.Location = new System.Drawing.Point(12, 635);
+            this.BTscore.Name = "BTscore";
+            this.BTscore.Size = new System.Drawing.Size(178, 44);
+            this.BTscore.TabIndex = 5;
+            this.BTscore.Text = "Click for Score";
+            this.BTscore.UseVisualStyleBackColor = true;
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.Color.OrangeRed;
+            this.scoreLabel.Location = new System.Drawing.Point(14, 692);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(0, 33);
+            this.scoreLabel.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 750);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.BTscore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TBUser);
             this.Controls.Add(this.TBLetters);
@@ -124,6 +149,8 @@
         private System.Windows.Forms.RichTextBox TBLetters;
         private System.Windows.Forms.RichTextBox TBUser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BTscore;
+        private System.Windows.Forms.Label scoreLabel;
         }
     }
 

@@ -22,7 +22,7 @@ namespace Anagrams
         private void Form1_Load(object sender, EventArgs e)
             {
             TBUser.Visible = false;
-
+            
             }
 
         private void BTstart_Click(object sender, EventArgs e)
@@ -40,7 +40,9 @@ namespace Anagrams
             timer1.Enabled = true;
             timer1.Tick += new System.EventHandler(OnTimerEvent);
             TBUser.Focus();
-            string answer = Console.ReadLine().ToLower();
+            TBUser.Text.ToLower();
+            string answer = TBUser.Text.ToLower();
+            answer.Split('\n');
             globals.ListUsersAnswers.Add(answer);
 
             }
@@ -52,11 +54,37 @@ namespace Anagrams
 
             }
 
+        private void BTscore_Click(object sender, EventArgs e)
+            {
+            string fileName = "Answers.txt";
+            string pathOfFile = Path.GetFullPath(fileName);
+            string userFile = pathOfFile.Replace(@"/bin/Debug/" + fileName, "/" + fileName);
+            string correctAnswers = File.ReadAllText(userFile);
+
+            Char[] newArray  = correctAnswers.ToArray();
+            globals.LIST_CORRECT_ANSWERS = newArray.ToList();
+            correctAnswers.ToList();
+            int ctr = 0;
+            for (int i = 0; i < storyList.Count && i < globals.ListUsersAnswers.Count; i++)
+                {
+                if (globals.ListUsersAnswers[i] == List[i])
+
+                    {
+                    ctr++;
+                    }
+                else
+                    {
+                        {
+                        scoreLabel.Visible = true;
+                        scoreLabel.Text = "You scored: " + ctr;
+            }
         }
     public static class globals
         {
         public static List<string> ListUsersAnswers = new List<string>();
-        public static List<string> LIST_CORRECT_ANSWERS = new List<string> { "d", "a", "b", "d", "c", "b", "d", "a", "c", "c", "d", "b" };
+        public static List<Char> LIST_CORRECT_ANSWERS = new List<Char>();
+
+
         }
     }
 
