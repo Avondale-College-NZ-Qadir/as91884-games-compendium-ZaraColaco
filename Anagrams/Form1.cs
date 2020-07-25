@@ -35,57 +35,63 @@ namespace Anagrams
             TBUser.ReadOnly = false;
             Timer timer1 = new Timer
                 {
-                Interval = 20000
+                Interval = 60000
                 };
             timer1.Enabled = true;
             timer1.Tick += new System.EventHandler(OnTimerEvent);
             TBUser.Focus();
-            TBUser.Text.ToLower();
-            string answer = TBUser.Text.ToLower();
-            answer.Split('\n');
-            globals.ListUsersAnswers.Add(answer);
+            
 
             }
         public void OnTimerEvent(object sender, EventArgs e)
             {
             TBUser.ReadOnly = true;
             label1.Text = "Time's up!!!";
-            //TextWriter txt = new StreamWriter(UserFile);
+            if (globals.TimesRan == 0)
+                {
+                BTscore.Visible = true;
+                }
+
 
             }
 
-        private void BTscore_Click(object sender, EventArgs e)
+        private void BTscore_Click_1(object sender, EventArgs e)
             {
+            string [] answer = TBUser.Text.ToLower().Split('\n');
+            List<string> listUsersAnswers = new List<string>(answer.ToList().Distinct());
             string fileName = "Answers.txt";
             string pathOfFile = Path.GetFullPath(fileName);
-            string userFile = pathOfFile.Replace(@"/bin/Debug/" + fileName, "/" + fileName);
-            string correctAnswers = File.ReadAllText(userFile);
-
-            Char[] newArray  = correctAnswers.ToArray();
-            globals.LIST_CORRECT_ANSWERS = newArray.ToList();
-            correctAnswers.ToList();
+            pathOfFile = pathOfFile.Replace(@"\", "/");
+            string answerFile = pathOfFile.Replace(@"/bin/Debug/" + fileName, "/" + fileName);
+            List<string> lines = File.ReadLines(answerFile).ToList();
+            //var correctAnswers = File.ReadAllLines(answerFile);
+            //string []correctAns = correctAnswers.Split('\n');
+            //var LIST_CORRECT_ANSWERS = new List<string>(correctAnswers.ToList()); 
+            //Char[] newArray  = correctAnswers.ToArray();
+           // globals.LIST_CORRECT_ANSWERS = newArray.ToList();
+            //correctAnswers.ToList();
             int ctr = 0;
-            for (int i = 0; i < storyList.Count && i < globals.ListUsersAnswers.Count; i++)
+            for (int i = 0; i < listUsersAnswers.Count; i++)
                 {
-                if (globals.ListUsersAnswers[i] == List[i])
-
+                if (lines.Contains(listUsersAnswers[i]))
                     {
                     ctr++;
                     }
-                else
-                    {
-                        {
-                        scoreLabel.Visible = true;
-                        scoreLabel.Text = "You scored: " + ctr;
-            }
+                }
+            scoreLabel.Visible = true;
+            scoreLabel.Text = "You scored: " + ctr;
         }
+
     public static class globals
         {
-        public static List<string> ListUsersAnswers = new List<string>();
-        public static List<Char> LIST_CORRECT_ANSWERS = new List<Char>();
+        public static int TimesRan = 0;
+        }
 
+        private void BTreturn_Click(object sender, EventArgs e)
+        {
 
         }
     }
+}
 
   

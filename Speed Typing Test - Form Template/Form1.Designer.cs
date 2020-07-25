@@ -50,7 +50,6 @@
             this.TBUserInput.TabIndex = 4;
             this.TBUserInput.Text = "";
             this.TBUserInput.Visible = false;
-            this.TBUserInput.TextChanged += new System.EventHandler(this.TBUserInput_TextChanged);
             // 
             // BTStart
             // 
