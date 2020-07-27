@@ -1,0 +1,20 @@
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csprojAssemblyReference.cache
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed_Typing_Test___Form_Template.Properties.Resources.resources
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csproj.GenerateResource.cache
+C:\Users\ac106503\Source\Repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csproj.CoreCompileInputs.cache
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.exe.config
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.exe
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.pdb
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.exe
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.pdb
+C:\Users\ac106503\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed_Typing_Test___Form_Template.Form1.resources
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.exe.config
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.exe
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\bin\Debug\Speed Typing Test - Form Template.pdb
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csprojAssemblyReference.cache
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed_Typing_Test___Form_Template.Form1.resources
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed_Typing_Test___Form_Template.Properties.Resources.resources
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csproj.GenerateResource.cache
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.csproj.CoreCompileInputs.cache
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.exe
+C:\Users\colac\source\repos\as91884-games-compendium-ZaraColaco\Speed Typing Test - Form Template\obj\Debug\Speed Typing Test - Form Template.pdb

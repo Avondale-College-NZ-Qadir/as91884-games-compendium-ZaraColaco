@@ -1,0 +1,10 @@
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory_Game.Form1.resources
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory_Game.Properties.Resources.resources
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.GenerateResource.cache
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CoreCompileInputs.cache
+C:\Users\colac\source\repos\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
+C:\Users\colac\source\repos\Memory Game\Memory Game\bin\Debug\Memory Game.exe
+C:\Users\colac\source\repos\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory Game.exe
+C:\Users\colac\source\repos\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
