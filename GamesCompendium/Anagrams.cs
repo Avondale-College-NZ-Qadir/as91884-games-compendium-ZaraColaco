@@ -22,11 +22,12 @@ namespace Anagrams
         private void Form1_Load(object sender, EventArgs e)
             {
             TBUser.Visible = false;
-            
+            TBLetters.Visible = false;
             }
 
         private void BTstart_Click(object sender, EventArgs e)
             {
+            TBLetters.Visible = true;
             BTstart.Visible = false;
             label1.Visible = true;
             label1.Text = "Your 60 seconds starts NOW!";

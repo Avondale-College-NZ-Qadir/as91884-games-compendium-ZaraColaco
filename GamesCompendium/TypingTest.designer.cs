@@ -29,6 +29,7 @@
         private void InitializeComponent()
             {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TypingTestForm));
             this.TBUserInput = new System.Windows.Forms.RichTextBox();
             this.BTStart = new System.Windows.Forms.Button();
             this.TBStory = new System.Windows.Forms.TextBox();
@@ -38,16 +39,17 @@
             this.BTScore = new System.Windows.Forms.Button();
             this.scoreLabel = new System.Windows.Forms.Label();
             this.BTreturn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TBUserInput
             // 
             this.TBUserInput.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBUserInput.ForeColor = System.Drawing.Color.Olive;
-            this.TBUserInput.Location = new System.Drawing.Point(17, 426);
-            this.TBUserInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBUserInput.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.TBUserInput.Location = new System.Drawing.Point(90, 4023);
+            this.TBUserInput.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.TBUserInput.Name = "TBUserInput";
-            this.TBUserInput.Size = new System.Drawing.Size(725, 218);
+            this.TBUserInput.Size = new System.Drawing.Size(5892, 1930);
             this.TBUserInput.TabIndex = 4;
             this.TBUserInput.Text = "";
             this.TBUserInput.Visible = false;
@@ -56,10 +58,10 @@
             // 
             this.BTStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTStart.ForeColor = System.Drawing.Color.Red;
-            this.BTStart.Location = new System.Drawing.Point(253, 353);
-            this.BTStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTStart.Location = new System.Drawing.Point(2066, 3249);
+            this.BTStart.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.BTStart.Name = "BTStart";
-            this.BTStart.Size = new System.Drawing.Size(207, 37);
+            this.BTStart.Size = new System.Drawing.Size(1691, 333);
             this.BTStart.TabIndex = 5;
             this.BTStart.Text = "Click to Start";
             this.BTStart.UseVisualStyleBackColor = true;
@@ -68,35 +70,37 @@
             // TBStory
             // 
             this.TBStory.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBStory.Location = new System.Drawing.Point(17, 44);
-            this.TBStory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBStory.Location = new System.Drawing.Point(90, 468);
+            this.TBStory.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.TBStory.Multiline = true;
             this.TBStory.Name = "TBStory";
             this.TBStory.ReadOnly = true;
-            this.TBStory.Size = new System.Drawing.Size(725, 305);
+            this.TBStory.Size = new System.Drawing.Size(5892, 2713);
             this.TBStory.TabIndex = 6;
             // 
             // LBdisplay
             // 
             this.LBdisplay.AutoSize = true;
-            this.LBdisplay.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBdisplay.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBdisplay.Location = new System.Drawing.Point(256, 392);
-            this.LBdisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBdisplay.BackColor = System.Drawing.Color.Transparent;
+            this.LBdisplay.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBdisplay.ForeColor = System.Drawing.Color.GhostWhite;
+            this.LBdisplay.Location = new System.Drawing.Point(1870, 3681);
+            this.LBdisplay.Margin = new System.Windows.Forms.Padding(16, 0, 16, 0);
             this.LBdisplay.Name = "LBdisplay";
-            this.LBdisplay.Size = new System.Drawing.Size(213, 33);
+            this.LBdisplay.Size = new System.Drawing.Size(246, 36);
             this.LBdisplay.TabIndex = 7;
             this.LBdisplay.Text = "                                 ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(90, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 16, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(736, 33);
+            this.label1.Size = new System.Drawing.Size(1242, 41);
             this.label1.TabIndex = 8;
             this.label1.Text = "Instructions: Copy the text! Case and punctuation matter. Do try your best ";
             // 
@@ -107,10 +111,10 @@
             // BTScore
             // 
             this.BTScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTScore.Location = new System.Drawing.Point(262, 655);
-            this.BTScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTScore.Location = new System.Drawing.Point(2066, 6156);
+            this.BTScore.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.BTScore.Name = "BTScore";
-            this.BTScore.Size = new System.Drawing.Size(207, 40);
+            this.BTScore.Size = new System.Drawing.Size(1691, 360);
             this.BTScore.TabIndex = 9;
             this.BTScore.Text = "Click for score";
             this.BTScore.UseVisualStyleBackColor = true;
@@ -120,9 +124,11 @@
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
+            this.scoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.scoreLabel.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.scoreLabel.Location = new System.Drawing.Point(217, 667);
+            this.scoreLabel.ForeColor = System.Drawing.Color.White;
+            this.scoreLabel.Location = new System.Drawing.Point(1772, 6003);
+            this.scoreLabel.Margin = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(0, 28);
             this.scoreLabel.TabIndex = 10;
@@ -132,20 +138,33 @@
             // 
             this.BTreturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTreturn.ForeColor = System.Drawing.Color.Red;
-            this.BTreturn.Location = new System.Drawing.Point(255, 712);
-            this.BTreturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTreturn.Location = new System.Drawing.Point(2066, 6552);
+            this.BTreturn.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.BTreturn.Name = "BTreturn";
-            this.BTreturn.Size = new System.Drawing.Size(205, 38);
+            this.BTreturn.Size = new System.Drawing.Size(1674, 342);
             this.BTreturn.TabIndex = 11;
             this.BTreturn.Text = "Return to Menu";
             this.BTreturn.UseVisualStyleBackColor = true;
             this.BTreturn.Click += new System.EventHandler(this.BTreturn_Click_1);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5121, 3618);
+            this.label2.Margin = new System.Windows.Forms.Padding(25, 0, 25, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(884, 117);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Welcome to Typing Test";
+            // 
             // TypingTestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(49F, 117F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 768);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1924, 1181);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BTreturn);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.BTScore);
@@ -154,7 +173,9 @@
             this.Controls.Add(this.TBStory);
             this.Controls.Add(this.BTStart);
             this.Controls.Add(this.TBUserInput);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Monotype Corsiva", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Coral;
+            this.Margin = new System.Windows.Forms.Padding(16, 18, 16, 18);
             this.Name = "TypingTestForm";
             this.Text = "Typing Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TypingTestForm_FormClosing);
@@ -174,6 +195,7 @@
         private System.Windows.Forms.Button BTScore;
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Button BTreturn;
-    }
+        private System.Windows.Forms.Label label2;
+        }
     }
 
