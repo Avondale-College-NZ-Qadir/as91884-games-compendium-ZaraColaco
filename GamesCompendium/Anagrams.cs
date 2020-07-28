@@ -21,60 +21,55 @@ namespace Anagrams
 
         private void Form1_Load(object sender, EventArgs e)
             {
-            TBUser.Visible = false;
+            TBUser.Visible = false;//Displays the user's text box for input
             
             }
 
-        private void BTstart_Click(object sender, EventArgs e)
+        private void BTstart_Click(object sender, EventArgs e)//start button click event
             {
-            BTstart.Visible = false;
-            label1.Visible = true;
-            label1.Text = "Your 60 seconds starts NOW!";
-            TBLetters.Text = "N     A     R     S     E     W";
-            TBUser.Visible = true;
-            TBUser.ReadOnly = false;
-            Timer timer1 = new Timer
+            TBLetters.Visible = true;//Displays the text box for Letters in the game
+            BTstart.Visible = false;//Hides the start button on click
+            LBPrompts.Visible = true;// displays a blank label
+            LBPrompts.Text = "Your 60 seconds starts NOW!";//sets the text of the blank label
+            TBLetters.Text = "N     A     R     S     E     W";// Populates the text box with these letters
+            TBUser.Visible = true;//Displays the user's text box for input
+            TBUser.ReadOnly = false;// Allows user to input into the text box
+            Timer timer1 = new Timer//timer
                 {
-                Interval = 60000
+                Interval = 60000// timer for 60 seconds
                 };
-            timer1.Enabled = true;
-            timer1.Tick += new System.EventHandler(OnTimerEvent);
-            TBUser.Focus();
+            timer1.Enabled = true;// starts the time
+            timer1.Tick += new System.EventHandler(OnTimerEvent);// when times up it calls the following method
+            TBUser.Focus();// focuses the users cursor in the user text box
             
 
             }
-        public void OnTimerEvent(object sender, EventArgs e)
+        public void OnTimerEvent(object sender, EventArgs e)// method for after 60 seconds is up
             {
-            TBUser.ReadOnly = true;
-            label1.Text = "Time's up!!!";
-            if (globals.TimesRan == 0)
+            TBUser.ReadOnly = true;//Disallows input into the users text box
+            LBPrompts.Text = "Time's up!!!";// Changes the text of the prompt label to this
+            if (globals.TimesRan == 0)// loop with counter since timer runs in background incriments counter after every 60 seconds and only after the first time will it do this
                 {
-                BTscore.Visible = true;
+                BTscore.Visible = true;// displays the score label
                 }
 
             }
 
-        private void BTscore_Click_1(object sender, EventArgs e)
+        private void BTscore_Click_1(object sender, EventArgs e)//score button click event
             {
-            string [] answer = TBUser.Text.ToLower().Split('\n');
-            List<string> listUsersAnswers = new List<string>(answer.ToList().Distinct());
-            string fileName = "Answers.txt";
-            string pathOfFile = Path.GetFullPath(fileName);
-            pathOfFile = pathOfFile.Replace(@"\", "/");
-            string answerFile = pathOfFile.Replace(@"/bin/Debug/" + fileName, "/" + fileName);
-            List<string> lines = File.ReadLines(answerFile).ToList();
-            //var correctAnswers = File.ReadAllLines(answerFile);
-            //string []correctAns = correctAnswers.Split('\n');
-            //var LIST_CORRECT_ANSWERS = new List<string>(correctAnswers.ToList()); 
-            //Char[] newArray  = correctAnswers.ToArray();
-           // globals.LIST_CORRECT_ANSWERS = newArray.ToList();
-            //correctAnswers.ToList();
-            int ctr = 0;
-            for (int i = 0; i < listUsersAnswers.Count; i++)
+            string [] answer = TBUser.Text.ToLower().Split('\n');// string array storing the users typing and coverting all the characters to lower case. Splits each word at enter.
+            List<string> listUsersAnswers = new List<string>(answer.ToList().Distinct());//List for users answers, adds all the answers from the string array that are unique/ no double ups
+            string fileName = "Answers.txt";// string storing the file name of the answe file
+            string pathOfFile = Path.GetFullPath(fileName);// gets the path of the file and stores in a string called pathOfFile
+            pathOfFile = pathOfFile.Replace(@"\", "/");// replaces all the backslashes in the file with forward slashes
+            string answerFile = pathOfFile.Replace(@"/bin/Debug/" + fileName, "/" + fileName);// adds the file name to the path to get the exact path of the answer file
+            List<string> answers = File.ReadLines(answerFile).ToList();// reads the answers form the file and stores in a list called answers
+            int ctr = 0;// new counter
+            for (int i = 0; i < listUsersAnswers.Count; i++)//for loop for when the counter is less than the length of the users answers list and then incriments the i  counter
                 {
-                if (lines.Contains(listUsersAnswers[i]))
+                if (answers.Contains(listUsersAnswers[i]))// if the correct answers list contains the answers in the users list
                     {
-                    ctr++;
+                    ctr++;// score counter incriments 
                     }
                 }
             scoreLabel.Visible = true;
