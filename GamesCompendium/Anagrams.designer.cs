@@ -82,6 +82,7 @@
             this.TBLetters.Location = new System.Drawing.Point(9, 185);
             this.TBLetters.Name = "TBLetters";
             this.TBLetters.ReadOnly = true;
+            this.TBLetters.ShortcutsEnabled = false;
             this.TBLetters.Size = new System.Drawing.Size(1007, 96);
             this.TBLetters.TabIndex = 3;
             this.TBLetters.Text = "";
@@ -92,6 +93,7 @@
             this.TBUser.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBUser.Location = new System.Drawing.Point(9, 322);
             this.TBUser.Name = "TBUser";
+            this.TBUser.ShortcutsEnabled = false;
             this.TBUser.Size = new System.Drawing.Size(1007, 317);
             this.TBUser.TabIndex = 4;
             this.TBUser.Text = "";

@@ -19,7 +19,7 @@ namespace Anagrams
             InitializeComponent();
             }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)//form load event
             {
             TBUser.Visible = false;//Displays the user's text box for input
             
@@ -31,7 +31,7 @@ namespace Anagrams
             BTstart.Visible = false;//Hides the start button on click
             LBPrompts.Visible = true;// displays a blank label
             LBPrompts.Text = "Your 60 seconds starts NOW!";//sets the text of the blank label
-            TBLetters.Text = "N     A     R     S     E     W";// Populates the text box with these letters
+            TBLetters.Text = "R     A     N     S     W     E";// Populates the text box with these letters
             TBUser.Visible = true;//Displays the user's text box for input
             TBUser.ReadOnly = false;// Allows user to input into the text box
             Timer timer1 = new Timer//timer
@@ -72,25 +72,26 @@ namespace Anagrams
                     ctr++;// score counter incriments 
                     }
                 }
-            scoreLabel.Visible = true;
-            scoreLabel.Text = "You scored: " + ctr + " out of 79";
+            scoreLabel.Visible = true;// Displays the score label
+            scoreLabel.Text = "You scored: " + ctr + " out of 79";// sets the text for the score label ctr is the score
         }
 
-        private void BTreturn_Click(object sender, EventArgs e)
+        private void BTreturn_Click(object sender, EventArgs e)//Return to menu button click event
         {
-            this.Hide();
+            this.Hide();// Hides the form
+            globals.TimesRan = 0; // resets variable to 0 for future rounds
         }
 
-        public static class globals
+        public static class globals//globals class for global variables
         {
-            public static int TimesRan = 0;
+            public static int TimesRan = 0;//Integer variable to calculate how many times the timer runs
         }
 
-        private void AnagramsForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void AnagramsForm_FormClosing(object sender, FormClosingEventArgs e)//For closing event
         {
-            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();
-            this.Hide();
-            mf.Show();
+            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();//returns to the menu form
+            this.Hide();//hides this form
+            mf.Show();//displays the menu form
         }
     }
 }

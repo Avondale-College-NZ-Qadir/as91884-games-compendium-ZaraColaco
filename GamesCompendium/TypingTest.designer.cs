@@ -47,9 +47,10 @@
             this.TBUserInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBUserInput.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBUserInput.ForeColor = System.Drawing.Color.Olive;
-            this.TBUserInput.Location = new System.Drawing.Point(11, 488);
+            this.TBUserInput.Location = new System.Drawing.Point(11, 490);
             this.TBUserInput.Margin = new System.Windows.Forms.Padding(2);
             this.TBUserInput.Name = "TBUserInput";
+            this.TBUserInput.ShortcutsEnabled = false;
             this.TBUserInput.Size = new System.Drawing.Size(725, 218);
             this.TBUserInput.TabIndex = 4;
             this.TBUserInput.Text = "";
@@ -180,7 +181,7 @@
             this.Text = "Typing Test";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TypingTestForm_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.TypingTestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

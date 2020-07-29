@@ -14,28 +14,26 @@ namespace Speed_Typing_Test___Form_Template
             InitializeComponent();
             }
         
-        private void Form1_Load(object sender, EventArgs e)
+        private void TypingTestForm_Load(object sender, EventArgs e)// Form load event
             {
-            TBUserInput.Visible = false;
-            globals.RandNum = globals.RandomNumber(1, 6);
-            globals.PathOfFile = globals.PathOfFile.Replace(@"\", "/");
-            string storyFile = globals.PathOfFile.Replace(@"/bin/Debug/" + globals.FileName, "/" + globals.FileName);
-            TBStory.Text = File.ReadAllText(storyFile);
+            TBUserInput.Visible = false;//Hides the text box for user input
+            globals.RandNum = globals.RandomNumber(1, 6);//runs RandomnNumber method which gets a random number between 1 and 5 inclusive and stores it in an integer variable called RandNum
+            globals.PathOfFile = globals.PathOfFile.Replace(@"\", "/");//Replaces the back slashes with forward slashes in the path of the story file
+            string storyFile = globals.PathOfFile.Replace(@"/bin/Debug/" + globals.FileName, "/" + globals.FileName);// stores the path of the story file in a string variable and replaces the extras in the file path with just the file name of the story          
+            TBStory.Text = File.ReadAllText(storyFile);//Reads the text from the story file and dsiplays it in the story text box
             }
 
-        private void BTStart_Click(object sender, EventArgs e)
+        private void BTStart_Click(object sender, EventArgs e)//Start button click event
             {
-            BTStart.Visible = false;
-            LBdisplay.Text = "Your 60 seconds starts NOW!!!";
-            //DateTime time = DateTime.Now;
-            //DateTime timeOver = time.AddSeconds(30);
-            TBUserInput.Visible = true;
-            TBUserInput.ReadOnly = false;
-            Timer timer1 = new Timer
+            BTStart.Visible = false;// Hides the start button
+            LBdisplay.Text = "Your 60 seconds starts NOW!!!";//Sets the text of the display label to this
+            TBUserInput.Visible = true;// Displays the text box for user input
+            TBUserInput.ReadOnly = false;//Disables readonly on the user text box
+            Timer timer1 = new Timer//new timer
                 {
-                Interval = 60000
+                Interval = 60000// timer runs for 60 seconds
                 };
-            timer1.Enabled = true;
+            timer1.Enabled = true;//Starts the timer
             timer1.Tick += new System.EventHandler(OnTimerEvent);
             TBUserInput.Focus();
 
@@ -90,7 +88,8 @@ namespace Speed_Typing_Test___Form_Template
 
         private void BTreturn_Click_1(object sender, EventArgs e)
         {
-        this.Hide(); 
+        this.Hide();
+        globals.valueSetter();
         }
 
         private void TypingTestForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -107,6 +106,15 @@ namespace Speed_Typing_Test___Form_Template
         public static int RandNum = RandomNumber(1, 6);
         public static string FileName = "story" + RandNum.ToString() + ".txt";
         public static string PathOfFile = Path.GetFullPath(FileName);
+
+        public static void valueSetter()
+        { 
+        TimesRan = 0;
+        RandNum = RandomNumber(1, 6);
+        FileName = "story" + RandNum.ToString() + ".txt";
+        PathOfFile = Path.GetFullPath(FileName);
+        
+        }
 
         public static int RandomNumber(int min, int max)
         {

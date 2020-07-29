@@ -28,7 +28,6 @@ namespace GamesCompendium
             this.Hide();
             Speed_Typing_Test___Form_Template.TypingTestForm Tt = new Speed_Typing_Test___Form_Template.TypingTestForm();
             Tt.ShowDialog();
-
         }
 
         private void memoryGameToolStripMenuItem_Click(object sender, EventArgs e)

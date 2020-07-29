@@ -86,6 +86,7 @@
             this.TBText.Margin = new System.Windows.Forms.Padding(2);
             this.TBText.Name = "TBText";
             this.TBText.ReadOnly = true;
+            this.TBText.ShortcutsEnabled = false;
             this.TBText.Size = new System.Drawing.Size(865, 78);
             this.TBText.TabIndex = 3;
             this.TBText.Text = "";
@@ -98,6 +99,7 @@
             this.TBUser.Margin = new System.Windows.Forms.Padding(2);
             this.TBUser.Name = "TBUser";
             this.TBUser.ReadOnly = true;
+            this.TBUser.ShortcutsEnabled = false;
             this.TBUser.Size = new System.Drawing.Size(863, 96);
             this.TBUser.TabIndex = 4;
             this.TBUser.Text = "";
