@@ -89,7 +89,7 @@ namespace Anagrams
 
         private void AnagramsForm_FormClosing(object sender, FormClosingEventArgs e)//For closing event
         {
-            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();//returns to the menu form
+            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();//local varible called mf with the menu form
             this.Hide();//hides this form
             mf.Show();//displays the menu form
         }
