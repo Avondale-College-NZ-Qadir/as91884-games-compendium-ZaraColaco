@@ -17,7 +17,7 @@ namespace Speed_Typing_Test___Form_Template
         private void TypingTestForm_Load(object sender, EventArgs e)// Form load event
             {
             TBUserInput.Visible = false;//Hides the text box for user input
-            globals.RandNum = globals.RandomNumber(1, 6);//runs RandomnNumber method which gets a random number between 1 and 5 inclusive and stores it in an integer variable called RandNum
+            globals.RandNum = globals.RandomNumber(1, 6);//runs RandomnNumber method which gets a Random number between 1 and 5 inclusive and stores it in an integer variable called RandNum
             globals.PathOfFile = globals.PathOfFile.Replace(@"\", "/");//Replaces the back slashes with forward slashes in the path of the story file
             string storyFile = globals.PathOfFile.Replace(@"/bin/Debug/" + globals.FileName, "/" + globals.FileName);// stores the path of the story file in a string variable and replaces the extras in the file path with just the file name of the story          
             TBStory.Text = File.ReadAllText(storyFile);//Reads the text from the story file and dsiplays it in the story text box
@@ -104,22 +104,22 @@ namespace Speed_Typing_Test___Form_Template
         {
         public static int TimesRan = 0;// global integer variable called TimesRan
         public static int RandNum = RandomNumber(1, 6);// global integer variable called RandNum
-        public static string FileName = "story" + RandNum.ToString() + ".txt";//Global string variable called Filename stores story plus the random number plus .txt For Example: story1.txt
+        public static string FileName = "story" + RandNum.ToString() + ".txt";//Global string variable called Filename stores story plus the Random number plus .txt For Example: story1.txt
         public static string PathOfFile = Path.GetFullPath(FileName);//Global string variable called PathofFile finds the path of filename and stores it in here
 
         public static void ValueSetter()//Method called ValueSetter to reset specific variables for when the form is selected from the menu
         { 
         TimesRan = 0;// TimesRan is set back to 0
-        RandNum = RandomNumber(1, 6);//runs method again for new random number
-        FileName = "story" + RandNum.ToString() + ".txt"; 
-        PathOfFile = Path.GetFullPath(FileName);
+        RandNum = RandomNumber(1, 6);//runs method again for new Random number
+        FileName = "story" + RandNum.ToString() + ".txt";//uses the new Random number for a new file name
+        PathOfFile = Path.GetFullPath(FileName);//Gets the path of the new file
         
         }
 
-        public static int RandomNumber(int min, int max)
+        public static int RandomNumber(int min, int max)// method for a Random number
         {
-            Random random = new Random();
-            return random.Next(min, max);
+            Random Random = new Random();// randomn varibale called Random
+            return Random.Next(min, max);// returns a Random number between 1 and 5 inclusive
         }
     }
     
