@@ -96,14 +96,14 @@ namespace Speed_Typing_Test___Form_Template
         {
             GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();//local varible called mf with the menu form
             this.Hide();//Hides typing test form
-            mf.Show();// displays the menu form
+            mf.Show();//displays the menu form
         }
     }
 
     public static class globals//globals class
         {
-        public static int TimesRan = 0;// global integer variable called TimesRan
-        public static int RandNum = RandomNumber(1, 6);// global integer variable called RandNum
+        public static int TimesRan = 0;// global integer variable called TimesRan counts the number of times the timer runs in the background
+        public static int RandNum = RandomNumber(1, 6);//global integer variable called RandNum stores a randomn number after running the RandomNumber method
         public static string FileName = "story" + RandNum.ToString() + ".txt";//Global string variable called Filename stores story plus the Random number plus .txt For Example: story1.txt
         public static string PathOfFile = Path.GetFullPath(FileName);//Global string variable called PathofFile finds the path of filename and stores it in here
 

@@ -41,57 +41,57 @@ namespace Memory_Game
             };
             timer1.Enabled = true;//timer starts
             timer1.Tick += new System.EventHandler(OnTimerEvent);//When time is up the OnTimerEvent method is called
-            TBUser.Focus();// focuses the users cursor in the user's text box
 
 
         }
         public void OnTimerEvent(object sender, EventArgs e)//Method called OnTimerEvent used when time is up
         {
-            TBUser.Visible = true;//
-            TBUser.ReadOnly = false;
-            TBUser.Focus();
-            if (globals.TimesRan == 0)
+            TBUser.Visible = true;//Shows the user's text box
+            TBUser.ReadOnly = false;//Allows input into the user's text box
+            TBUser.Focus();// focuses the users cursor in the user's text box
+            if (globals.TimesRan == 0)// if the number of times ran is zero then do this...
             {
-                TBText.Visible = false;
-                BTscore.Visible = true;
+                TBText.Visible = false;//Displays the Text Box with the correct phrase
+                BTscore.Visible = true;//Displays the score button
             }
         }
 
-        private void BTscore_Click(object sender, EventArgs e)
+        private void BTscore_Click(object sender, EventArgs e)//score button click event
         {
-            globals.TimesRan++;
-            TBText.Visible = true;
-            if (TBText.Text.ToLower() == TBUser.Text.ToLower())
+            globals.TimesRan++;//incriments counter increasing the number of times ran
+            TBUser.ReadOnly = true;//disallows input into the user's text box
+            TBText.Visible = true;//Shows the correct phrase so the user can compare it
+            if (TBText.Text.ToLower() == TBUser.Text.ToLower())//Converts both phrases to lower case and then checks if they're the same
             {
-                LBscore.Text = "You win!";
+                LBscore.Text = "You win!";//if they match the text of the score label becomes  "You win!"
             }
-            else
+            else//if they don't match
             {
-                LBscore.Text = "You Loose!";
+                LBscore.Text = "You Lose!";//The text of the score label becomes "You Lose!"
             }
-            LBscore.Visible = true;
+            LBscore.Visible = true;//Displays the score label
         }
 
-        private void BTReturn_Click(object sender, EventArgs e)
+        private void BTReturn_Click(object sender, EventArgs e)//Return Button click event
         {
-            this.Hide();
+            this.Hide();//Hides the memory game form
             globals.ValueSetter();// calls ValueSetter method
 
         }
 
-        private void MemoryGameForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MemoryGameForm_FormClosing(object sender, FormClosingEventArgs e)//Form closing event
         {
-            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();
-            this.Hide();
-            mf.Show();
+            GamesCompendium.MenuForm mf = new GamesCompendium.MenuForm();//local varible called mf with the menu form
+            this.Hide();//Hides the memory game form
+            mf.Show();//displays the menu form
 
         }
 
     }
-    public static class globals
+    public static class globals//globals class
     {
-        public static int TimesRan = 0;
-        public static int RandNum = RandomNumber(1, 5);
+        public static int TimesRan = 0;// global integer variable called TimesRan counts the number of times the timer runs in the background
+        public static int RandNum = RandomNumber(1, 5);//global integer variable called RandNum stores a randomn number after running the RandomNumber method
         public static List<string> Phrases = new List<string>();// List storing all 5 possible phrases
         public static void ValueSetter()//Method called ValueSetter to reset specific variables for when the form is selected from the menu
         {
