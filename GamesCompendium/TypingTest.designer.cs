@@ -103,9 +103,10 @@
             this.label1.Location = new System.Drawing.Point(5, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(776, 36);
+            this.label1.Size = new System.Drawing.Size(899, 36);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Instructions: Copy the text! Case and punctuation matter. Do try your best ";
+            this.label1.Text = "Instructions: Copy the text! Case doesn\'t matter but punctuation does. Do try you" +
+    "r best ";
             // 
             // timer1
             // 
