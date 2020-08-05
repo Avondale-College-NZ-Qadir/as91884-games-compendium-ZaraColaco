@@ -87,7 +87,6 @@
             this.TBText.Margin = new System.Windows.Forms.Padding(2);
             this.TBText.Name = "TBText";
             this.TBText.ReadOnly = true;
-            this.TBText.ShortcutsEnabled = false;
             this.TBText.Size = new System.Drawing.Size(865, 88);
             this.TBText.TabIndex = 3;
             this.TBText.Text = "";

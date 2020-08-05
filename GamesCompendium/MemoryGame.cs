@@ -47,10 +47,10 @@ namespace Memory_Game
         public void OnTimerEvent(object sender, EventArgs e)//Method called OnTimerEvent used when time is up
         {
             TBUser.Visible = true;//Shows the user's text box
-            TBUser.ReadOnly = false;//Allows input into the user's text box
             TBUser.Focus();// focuses the users cursor in the user's text box
             if (globals.TimesRan == 0)// if the number of times ran is zero then do this...
             {
+                TBUser.ReadOnly = false;//Allows input into the user's text box
                 TBText.Visible = false;//Displays the Text Box with the correct phrase
                 BTscore.Visible = true;//Displays the score button
             }
